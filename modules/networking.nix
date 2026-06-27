@@ -1,6 +1,6 @@
-{...}: {
+{config, ...}: {
   networking = {
-    hostName = "nixos";
+    hostName = config.my.hostName;
     networkmanager.enable = true;
   };
 

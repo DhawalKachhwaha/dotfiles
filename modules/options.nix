@@ -8,5 +8,9 @@
       type = lib.types.str;
       description = "Full name";
     };
+    hostName = lib.mkOption {
+      type = lib.types.str;
+      description = "Host Name";
+    };
   };
 }
