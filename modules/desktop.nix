@@ -4,13 +4,15 @@
   ...
 }: let
   sddm-astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "astronaut";
+    embeddedTheme = "jake_the_dog";
     themeConfig = {
       Background = "/var/lib/sddm/wallpaper";
     };
   };
 in {
   services.xserver.enable = true;
+
+  environment.systemPackages = [sddm-astronaut];
 
   services.displayManager.sddm = {
     enable = true;
@@ -19,7 +21,6 @@ in {
     theme = "sddm-astronaut-theme";
     extraPackages = with pkgs; [
       kdePackages.qtmultimedia
-      sddm-astronaut
     ];
   };
 

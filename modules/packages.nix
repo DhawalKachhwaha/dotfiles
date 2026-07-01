@@ -118,7 +118,6 @@
     nwg-look
     kdePackages.qt6ct
     simp1e-cursors
-    sddm-astronaut
     xdg-desktop-portal-gtk
     gnome-keyring
     nautilus
