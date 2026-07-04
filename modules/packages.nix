@@ -66,8 +66,6 @@
 
     # terminals
     ghostty
-    kitty
-    alacritty
 
     # wayland utilities
     cliphist
