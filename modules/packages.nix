@@ -119,6 +119,7 @@
     xdg-desktop-portal-gtk
     gnome-keyring
     nautilus
+    mpvpaper
 
     # noctalia
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
