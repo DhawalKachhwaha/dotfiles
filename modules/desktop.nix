@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   sddm-astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "jake_the_dog";
     themeConfig = {
@@ -34,6 +30,5 @@ in {
 
   programs.niri = {
     enable = true;
-    package = inputs.niri-git.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
 }

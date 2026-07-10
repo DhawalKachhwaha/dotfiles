@@ -80,6 +80,7 @@
     foliate
     celluloid
     loupe
+    mpv
 
     # graphics / design
     gimp
