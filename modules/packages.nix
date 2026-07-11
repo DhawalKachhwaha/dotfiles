@@ -93,7 +93,7 @@
     android-studio
     code-cursor
     zed-editor
-    aider-chat-full
+    stable.aider-chat-full
     ollama-cuda
     antigravity
 
