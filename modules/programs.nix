@@ -4,6 +4,10 @@
     firejail.enable = true;
     kdeconnect.enable = true;
     xwayland.enable = true;
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
 
     nix-ld = {
       enable = true;
