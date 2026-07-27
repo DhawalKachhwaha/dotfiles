@@ -43,6 +43,9 @@
       "CiscoPacketTracer_900_Ubuntu_64bit.deb"
       "discord"
       "antigravity"
+      "google-chrome"
+      "nvidia-kernel-modules"
+      "antigravity-ide"
     ];
 
   environment.systemPackages = with pkgs; [
@@ -85,17 +88,15 @@
     # graphics / design
     gimp
     blender
-    davinci-resolve
+    stable.davinci-resolve
 
     # development
     uv
     vscodium
-    android-studio
-    code-cursor
     zed-editor
     stable.aider-chat-full
-    ollama-cuda
-    antigravity
+    stable.ollama-cuda
+    gh
 
     # networking / vpn
     proton-vpn
@@ -103,6 +104,7 @@
 
     # misc
     chromium
+    google-chrome
     qbittorrent
     obsidian
     discord

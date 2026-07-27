@@ -8,6 +8,7 @@
       enable = true;
       nix-direnv.enable = true;
     };
+    appimage.enable = true;
 
     nix-ld = {
       enable = true;

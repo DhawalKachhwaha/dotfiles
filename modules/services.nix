@@ -4,6 +4,7 @@
     flatpak.enable = true;
     power-profiles-daemon.enable = true;
     upower.enable = true;
+    fwupd.enable = true;
 
     syncthing = {
       enable = true;
