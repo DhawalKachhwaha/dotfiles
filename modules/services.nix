@@ -5,6 +5,8 @@
     power-profiles-daemon.enable = true;
     upower.enable = true;
     fwupd.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
 
     syncthing = {
       enable = true;
