@@ -42,17 +42,18 @@
       "obsidian"
       "CiscoPacketTracer_900_Ubuntu_64bit.deb"
       "discord"
+      "discord-unwrapped"
       "antigravity"
       "google-chrome"
       "nvidia-kernel-modules"
       "antigravity-ide"
+      "lmstudio"
     ];
 
   environment.systemPackages = with pkgs; [
     # system tools
     vim
     wget
-    git
     tmux
     bat
     htop
@@ -95,8 +96,11 @@
     vscodium
     zed-editor
     stable.aider-chat-full
-    stable.ollama-cuda
     gh
+    (llama-cpp.override {
+      cudaSupport = true;
+    })
+    stable.antigravity-fhs
 
     # networking / vpn
     proton-vpn
