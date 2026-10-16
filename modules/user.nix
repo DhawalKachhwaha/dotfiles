@@ -17,6 +17,7 @@
   users.users.${config.my.username} = {
     isNormalUser = true;
     description = config.my.fullName;
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"

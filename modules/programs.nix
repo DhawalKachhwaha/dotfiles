@@ -7,6 +7,7 @@
     direnv = {
       enable = true;
       nix-direnv.enable = true;
+      enableZshIntegration = true;
     };
     appimage.enable = true;
     git = {
@@ -17,30 +18,29 @@
         "credential.https://gist.github.com".helper = "!gh auth git-credential";
       };
     };
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestions.enable = true;
+      syntaxHighlighting.enable = true;
+    };
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+    nix-index = {
+      enable = true;
+      enableBashIntegration = true;
+    };
 
     nix-ld = {
       enable = true;
-      libraries = with pkgs; [
-        libGL
-        glibc
-        glib
-        fmodex
-        libxcb
-        zlib
-        zstd
-        stdenv.cc.cc
-        curl
-        openssl
-        attr
-        libssh
-        bzip2
-        libxml2
-        acl
-        libsodium
-        util-linux
-        xz
-        systemd
-      ];
+
+      libraries =
+        pkgs.steam-run.args.multiPkgs pkgs
+        ++ (with pkgs; [
+          glib
+        ]);
     };
   };
 }

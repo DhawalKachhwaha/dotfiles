@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  inputs,
+  pkgs,
+  ...
+}: let
   sddm-astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "jake_the_dog";
     themeConfig = {
@@ -6,6 +10,7 @@
     };
   };
 in {
+  imports = [inputs.umbriel.nixosModules.default];
   services.xserver.enable = true;
 
   environment.systemPackages = [sddm-astronaut];
@@ -31,4 +36,6 @@ in {
   programs.niri = {
     enable = true;
   };
+
+  programs.umbriel.enable = true;
 }

@@ -36,11 +36,9 @@
       "libnvjitlink"
       "libcusparse"
       "libnpp"
-      "cisco-packet-tracer"
       "android-studio"
       "cursor"
       "obsidian"
-      "CiscoPacketTracer_900_Ubuntu_64bit.deb"
       "discord"
       "discord-unwrapped"
       "antigravity"
@@ -113,7 +111,6 @@
     obsidian
     discord
     onlyoffice-desktopeditors
-    cisco-packet-tracer_9
     mediawriter
     gnome-network-displays
     pywalfox-native
