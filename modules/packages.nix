@@ -46,6 +46,9 @@
       "nvidia-kernel-modules"
       "antigravity-ide"
       "lmstudio"
+      "cccl"
+      "libnvvm"
+      "cuda_crt"
     ];
 
   environment.systemPackages = with pkgs; [
@@ -119,11 +122,11 @@
     adw-gtk3
     nwg-look
     kdePackages.qt6ct
-    simp1e-cursors
     xdg-desktop-portal-gtk
     gnome-keyring
     nautilus
     mpvpaper
+    bibata-cursors
 
     # noctalia
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default

@@ -2,27 +2,21 @@
   inputs,
   pkgs,
   ...
-}: let
-  sddm-astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "jake_the_dog";
-    themeConfig = {
-      Background = "/var/lib/sddm/wallpaper";
-    };
-  };
-in {
+}: {
   imports = [inputs.umbriel.nixosModules.default];
   services.xserver.enable = true;
 
-  environment.systemPackages = [sddm-astronaut];
-
-  services.displayManager.sddm = {
+  services.displayManager.noctalia-greeter = {
     enable = true;
-    wayland.enable = true;
-    package = pkgs.kdePackages.sddm;
-    theme = "sddm-astronaut-theme";
-    extraPackages = with pkgs; [
-      kdePackages.qtmultimedia
-    ];
+    passwordlessSyncUsers = ["dhawal"];
+    settings = {
+      cursor.size = 24;
+      keyboard.layout = "us";
+    };
+    cursorTheme = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+    };
   };
 
   xdg.portal = {
